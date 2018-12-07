@@ -34,7 +34,6 @@ if (adcode == 0) {
 
 srvs = c("http://healthstat.snu.ac.kr/CRAN",
 	"http://cran.yu.ac.kr",
-	"http://cran.seoul.go.kr",
 	"http://cran.biodisk.org")
 repo = srvs[round(round((as.numeric(Sys.time())*10)%%10)/10*(length(srvs)-1))+1]
 specpkg = list(
