@@ -32,7 +32,11 @@ if (adcode == 0) {
   stop()
 }
 
-repo = "http://cran.nexr.com"
+srvs = c("http://healthstat.snu.ac.kr/CRAN",
+	"http://cran.yu.ac.kr",
+	"http://cran.seoul.go.kr",
+	"http://cran.biodisk.org")
+repo = srvs[round(round((as.numeric(Sys.time())*10)%%10)/10*(length(srvs)-1))+1]
 specpkg = list(
   "ggfortify" = "0.4.1",
   "data.table" = "1.10.4-3"
