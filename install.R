@@ -141,7 +141,7 @@ if (!is.null(pkgs2inst)) for (i in length(pkgs2inst):1) {
 	if (is.package.exists(v) == FALSE) {
 	  ccat("[INST] Package [", v, "]\n")
 
-	  install.packages(v, repo="http://cran.nexr.com")
+	  install.packages(v, repo=repo)
 	  if (is.package.exists(v) == FALSE) {
 	    if (!is.null(specpkg[[v]])) {
 		  ver <- specpkg[[v]]
